@@ -41,6 +41,14 @@ export function Header() {
             >
                Admin
             </NavLink>
+            <NavLink to="contactUs"
+               className={({ isActive }) => 
+                  `text-white no-underline p-1 pb-0.5 border-solid border-b-2
+                  ${isActive? "border-white": "border-transparent"}`
+               }
+            >
+               ContactUs
+            </NavLink>
          </nav>
       </header>
    )

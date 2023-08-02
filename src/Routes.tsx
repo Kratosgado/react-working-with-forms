@@ -6,6 +6,7 @@ import App from "./App";
 import { ProductPage } from "./pages/ProductPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { HomePage } from "./pages/HomePage";
+import { ContactPage } from "./ContactPage";
 
 // lazily import admin page
 const AdminPage = lazy(() => import('./pages/AdminPage'));
@@ -39,6 +40,18 @@ const router = createBrowserRouter([
          {
             path: 'products/:id',
             element: <ProductPage />
+         },
+         {
+            path: 'contactUs',
+            element: (
+               <Suspense fallback={
+                  <div className="text-center p-5 text-xl">
+                     Loading...
+                  </div>
+               }>
+                  <ContactPage />
+               </Suspense>
+            )
          }
       ]
    },
