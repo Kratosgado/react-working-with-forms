@@ -23,6 +23,7 @@ export function ContactPage() {
                   type="text"
                   id="name"
                   name="name"
+                  required
                />
             </div>
             <div className={fieldStyle}>
@@ -31,12 +32,15 @@ export function ContactPage() {
                   type="email"
                   id="email"
                   name="email"
+                  required
+                  pattern="\S+@\S+\.\S+"
                />
             </div>
             <div className={fieldStyle}>
                <label htmlFor="reason">Reason you need to contact us</label>
                <select id="reason"
                   name="reaseon"
+                  required
                >
                   <option value=""></option>
                   <option value="Support">Support</option>
