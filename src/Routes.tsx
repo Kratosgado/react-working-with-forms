@@ -6,7 +6,7 @@ import App from "./App";
 import { ProductPage } from "./pages/ProductPage";
 import { ErrorPage } from "./pages/ErrorPage";
 import { HomePage } from "./pages/HomePage";
-import { ContactPage, contactPageAction } from "./ContactPage";
+import { ContactPage } from "./ContactPage";
 import { ThankYouPage } from "./ThankYouPage";
 
 // lazily import admin page
@@ -53,7 +53,6 @@ const router = createBrowserRouter([
                   <ContactPage />
                </Suspense>
             ),
-            action: contactPageAction,
          },
          {
             path: 'thank-you/:name',
